@@ -15,8 +15,7 @@ public class kabel : MonoBehaviour
         //State 4 = child shutdown
         State = 1;
     }
-
-    void OnTriggerEnter(Collider other)
+        void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<platform>().Power == true && State <= 3) //check of het een child is. 
         {
@@ -62,4 +61,5 @@ public class kabel : MonoBehaviour
             other.GetComponent<platform>().Power = false;               //zet platform uit   
         }
     }
+    
 }
