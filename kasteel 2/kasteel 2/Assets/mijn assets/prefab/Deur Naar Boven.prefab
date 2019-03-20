@@ -124,6 +124,11 @@ MonoBehaviour:
   Force: 12
   Destroy: 0
   Heavy: 0
+  Up: 0
+  Left: 0
+  Right: 0
+  forward: 0
+  backward: 0
 --- !u!1 &1044646028423582528
 GameObject:
   m_ObjectHideFlags: 0

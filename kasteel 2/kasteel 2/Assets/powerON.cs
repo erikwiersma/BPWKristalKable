@@ -6,7 +6,6 @@ public class powerON : MonoBehaviour
 {
     public GameObject Input;
     public GameObject partecles;
-    public GameObject pickupObject;
      
     void Update()
     {

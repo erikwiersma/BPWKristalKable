@@ -5,18 +5,25 @@ using UnityEngine;
 public class platformDoorgever : MonoBehaviour
 {
 
-    public GameObject ItSelf;
     public GameObject Input;
+    public GameObject start;
+    public GameObject end;
 
     void Update()
     {
-        if (Input.GetComponent<platform>().Power == true)
+        if (GetComponent<platform>().Power == true)
         {
-            ItSelf.GetComponent<platform>().Power = true;
+            //GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
+            Input.GetComponent<platform>().Power = true;
+            start.GetComponent<kabel>().State = 3;
+            end.GetComponent<kabel>().State = 2;
         }
         else
         {
-            ItSelf.GetComponent<platform>().Power = false;
+            //GetComponent<Renderer>().material.DisableKeyword("_EMISSION");
+            Input.GetComponent<platform>().Power = false;
+            start.GetComponent<kabel>().State = 0;
+            end.GetComponent<kabel>().State = 0;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class PickUp : MonoBehaviour
 {
@@ -6,11 +7,24 @@ public class PickUp : MonoBehaviour
     public bool canHold = true;
     public GameObject item;
     public GameObject tempParent;
-    public bool isHolding = false;
+    private bool isHolding = false;
     public bool check = true;
     public float trowFroce = 600f;
     Vector3 objectPos;
     float distance;
+
+    public Boolean IsHolding
+    {
+        get
+        {
+            return isHolding;
+        }
+
+        set
+        {
+            isHolding = value;
+        }
+    }
 
 
 
@@ -21,10 +35,10 @@ public class PickUp : MonoBehaviour
         distance = Vector3.Distance(item.transform.position, tempParent.transform.position);
         if (distance >= pickUpDistance )
         {
-            isHolding = false;
+            IsHolding = false;
         }
         //check if isHolding
-        if (isHolding == true && check == true)
+        if (IsHolding == true && check == true)
         {
             item.GetComponent<Rigidbody>().velocity = Vector3.zero;
             item.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
@@ -33,7 +47,7 @@ public class PickUp : MonoBehaviour
             if (Input.GetMouseButtonDown(1))        //muis input rechts 
             {
                 item.GetComponent<Rigidbody>().AddForce(tempParent.transform.forward * trowFroce);      //om het object weg te schieten 
-                isHolding = false;
+                IsHolding = false;
             }
         }
         else
@@ -48,14 +62,14 @@ public class PickUp : MonoBehaviour
     {
         if (distance <= pickUpDistance)                                 //kijkt of de afstand groter is dan de oppak afstand
         {
-            isHolding = true;                                           //bool van de ifstatement AAN
+            IsHolding = true;                                           //bool van de ifstatement AAN
             item.GetComponent<Rigidbody>().useGravity = false;          //zet de zwaartekracht van de rigidboy uit
             item.GetComponent<Rigidbody>().detectCollisions = true;     //zet de collision detection aan    
         }
     }
     void OnMouseUp()
     {
-        isHolding = false;                                              //bool van de ifstatement UIT
+        IsHolding = false;                                              //bool van de ifstatement UIT
     }
 
 }   

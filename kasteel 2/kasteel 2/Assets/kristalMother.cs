@@ -10,7 +10,7 @@ public class kristalMother : MonoBehaviour
     }
     void OnTriggerStay(Collider startPlatform)
     {
-        if (Motherkristal.GetComponent<PickUp>().isHolding == false)
+        if (Motherkristal.GetComponent<PickUp>().IsHolding == false)
         {
             Motherkristal.GetComponent<PickUp>().check = false;
         }

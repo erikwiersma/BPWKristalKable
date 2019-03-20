@@ -47,6 +47,7 @@ public class kabel : MonoBehaviour
         {
             other.GetComponent<platform>().Power = true;                //Zet platform aan
         }
+
     }
     void OnTriggerExit(Collider other)
     {
