@@ -433,7 +433,7 @@ GameObject:
   - component: {fileID: 1366283970}
   - component: {fileID: 1366283969}
   m_Layer: 5
-  m_Name: quid
+  m_Name: quit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -491,7 +491,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Quid
+  m_Text: Quit
 --- !u!222 &1366283970
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -563,7 +563,7 @@ GameObject:
   - component: {fileID: 1700943671}
   - component: {fileID: 1700943670}
   m_Layer: 5
-  m_Name: quid button
+  m_Name: quit button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
