@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/menu.unity
     guid: f8b71c51e4dd87b43ba898cf1287d7b0
   - enabled: 1
-    path: Assets/Scenes/kasteel 2.unity
+    path: Assets/Scenes/Cristal fort.unity
     guid: 407e31f2081ed404ab924178cc4c3a93
   m_configObjects: {}
